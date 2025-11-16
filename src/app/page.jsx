@@ -33,8 +33,15 @@ export default function Home() {
           duration: 1,
           delay: 1,
         }}
-        className="fixed bottom-4 right-4 text-sm text-white/40 pointer-events-none z-50">
-        @anujbuilds
+        className="fixed bottom-4 right-4 pointer-events-none z-50 flex flex-col items-end text-white/70">
+        <span className="text-[11px] uppercase tracking-[0.4em] text-white/40">
+          crafted by
+        </span>
+        <span className="mt-1 inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-semibold text-transparent shadow-lg shadow-pink-900/40 backdrop-blur">
+          <span className="bg-gradient-to-r from-pink-200 via-rose-300 to-purple-300 bg-clip-text">
+            @CyberOGPro
+          </span>
+        </span>
       </motion.div>
     </div>
   )
