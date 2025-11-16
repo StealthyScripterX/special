@@ -66,10 +66,17 @@ export default function LyricsScreen() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ ease: "easeOut" }}
-            className="min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
+            className="relative flex min-h-screen items-center justify-center overflow-hidden p-6">
+
+            {/* Romantic background image */}
+            <div className="absolute inset-0 -z-10">
+                <div className="absolute inset-0 bg-[url('/images/lover-bg.svg')] bg-cover bg-center" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/70" />
+            </div>
 
             {/* Floating elements */}
-            <div className="fixed inset-0 pointer-events-none ">
+            <div className="pointer-events-none absolute inset-0 z-10">
                 {floatingItems.map(({ x, delay, duration, Element }, i) => (
                     <motion.div
                         key={i}
@@ -104,7 +111,7 @@ export default function LyricsScreen() {
             </div>
 
             {/* Lyrics container */}
-            <div className="text-center z-10 max-w-4xl mx-auto">
+            <div className="z-20 mx-auto max-w-4xl text-center">
                 <AnimatePresence mode="wait">
                     {showLyric && currentLyric < lyrics.length && (
                         <motion.h1
@@ -135,7 +142,7 @@ export default function LyricsScreen() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, ease: "easeInOut" }}
-                    className="absolute inset-0 flex flex-col gap-6 items-center justify-center pointer-events-none "
+                    className="pointer-events-none absolute inset-0 z-30 flex flex-col items-center justify-center gap-6"
                 >
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
