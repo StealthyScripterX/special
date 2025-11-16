@@ -66,14 +66,7 @@ export default function LyricsScreen() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ ease: "easeOut" }}
-            className="relative flex min-h-screen items-center justify-center overflow-hidden p-6">
-
-            {/* Romantic background image */}
-            <div className="absolute inset-0 -z-10">
-                <div className="absolute inset-0 bg-[url('/images/lover-bg.svg')] bg-cover bg-center" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/60" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/70" />
-            </div>
+            className="collage-bg relative flex min-h-screen items-center justify-center overflow-hidden p-6">
 
             {/* Floating elements */}
             <div className="pointer-events-none absolute inset-0 z-10">
